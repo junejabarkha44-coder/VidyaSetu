@@ -1,0 +1,204 @@
+  /* .chatbot {
+  width: 380px;             
+  height: 520px;            
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+.chat-header {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+
+.chat-body {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  background: #f3f4f6;
+}
+
+
+.bot {
+  max-width: 75%;
+  background: #e5e7eb;
+  color: #111827;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.user {
+  max-width: 75%;
+  background: #4f46e5;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  margin-left: 8px;
+  padding: 10px 16px;
+  background: #4f46e5;
+  color: white; 
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-input button:hover {
+  background: #4338ca;
+}
+.assistant-btn-wrapper {
+  display: flex;
+  justify-content: center;   
+  margin: 40px 0;            
+}
+
+.assistant-btn {
+  background: linear-gradient(135deg, #5b5bf0, #7b7bff);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(91, 91, 240, 0.3);
+  transition: all 0.3s ease;
+}
+
+.assistant-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(91, 91, 240, 0.45);
+}   */
+
+
+
+.flex.flex-col.h-96.w-80 {
+  position: fixed;
+  
+  /* Screen ke center mein laane ke liye logic */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Bilkul center point fix karne ke liye */
+  
+  width: 350px; /* Aap width thodi bada bhi sakte hain center ke liye */
+  height: 500px; 
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  border: 1px solid #e5e7eb;
+}
+
+/* Baki saari styling (Header, Messages, Input) waisi hi rahegi */
+
+/* Header Styling */
+.bg-blue-600 {
+  background-color: #4f46e5 !important; /* Modern Indigo/Blue color */
+  padding: 15px !important;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* Chat Message Area */
+.flex-1.overflow-y-auto {
+  background-color: #f8fafc;
+  padding: 15px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin; /* Firefox scrollbar */
+}
+
+/* User Message (Right side) */
+.justify-end .bg-blue-500 {
+  background-color: #4f46e5 !important;
+  color: white;
+  border-radius: 15px 15px 0px 15px !important;
+  padding: 10px 14px !important;
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.2);
+}
+
+/* AI Message (Left side) */
+.justify-start .bg-gray-200 {
+  background-color: #e2e8f0 !important;
+  color: #1e293b;
+  border-radius: 15px 15px 15px 0px !important;
+  padding: 10px 14px !important;
+}
+
+/* Input Area (Bottom) */
+.p-2.border-t {
+  padding: 12px !important;
+  background-color: white;
+  border-top: 1px solid #f1f5f9 !important;
+}
+
+/* Input Field */
+input.flex-1 {
+  border: 1px solid #cbd5e1 !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  transition: border 0.3s ease;
+}
+
+input.flex-1:focus {
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+/* Send Button */
+button.bg-blue-600 {
+  background-color: #4f46e5 !important;
+  border-radius: 20px !important;
+  padding: 0 15px !important;
+  transition: transform 0.2s ease;
+}
+
+button.bg-blue-600:hover {
+  transform: scale(1.05);
+  background-color: #4338ca !important;
+}
